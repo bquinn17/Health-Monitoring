@@ -1,0 +1,138 @@
+4010-250 Project Journal
+C Health Monitoring System Project - Part 2
+
+Name: Bryan Quinn
+
+===========  Stage 1  ==========================================
+Start
+Estimated Time	HH MM:30
+Plan:
+(Order of implementation, testing approach, estimation technique)
+Become familiar with all files, functions and data structures
+involved. Create a section in the main function for reading in
+patient data from stdin. Use that patient data along with the
+addPatient function to check in a patient. Test with variations
+of the provided test line.
+
+Complete
+Actual Time	HH MM: 35
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+Originally forgot to call scanf again at the end of the while loop,
+causing a seg fault. I also spelled some function calls wrong
+which led to some lame bugs. Other than that this stage was pretty
+easy.
+
+===========  Stage 2  ==========================================
+Start
+Estimated Time	HH MM: 20
+Plan:
+(Order of implementation, testing approach, estimation technique)
+Complete the function in health_util for adding a data type.
+Make sure it compiles, then add a section in the main method of
+health.c to call this function when necessary.
+
+Complete
+Actual Time	HH MM: 20
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+I have a feeling that it will become increasingly diffecult to
+test each step of this project, since there is so much going on
+under the hood that is not seen in the command line.
+No major problem with this step, took as long as I expected it to.
+
+===========  Stage 3  ==========================================
+Start
+Estimated Time	HH MM: 0
+Plan:
+(Order of implementation, testing approach, estimation technique)
+I already wrote the code to support this in level 1. Woops.
+
+Complete
+Actual Time	HH MM: 0
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+Tested it to make sure it work, and it does. I'm not entirely sure
+if I am maintaining the circular buffer properly, but I think it
+will work.
+
+===========  Stage 4  ==========================================
+Start
+Estimated Time	HH MM: 40
+Plan:
+(Order of implementation, testing approach, estimation technique)
+Check to make sure that all functionality for adding data is
+present and functioning correctly. Add print functionality
+in the main method to print the data types. Make sure to print
+none if no data is present.
+
+Complete
+Actual Time	HH:1 MM:20
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+I ran into a couple bug with the way that I was using the circular
+buffers. Usually it was because I was not handling the first entry
+to the buffer correctly. This led to a lot of segmentation faults
+that were hard to track down.
+
+===========  Stage 5  ==========================================
+Start
+Estimated Time	HH MM: 0
+Plan:
+(Order of implementation, testing approach, estimation technique)
+The code that I have written already supports this functionality.
+
+Complete
+Actual Time	HH MM: 0
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+Did extra testing to make sure that the code works the way it is
+supposed to.
+
+===========  Stage 6  ==========================================
+Start
+Estimated Time	HH MM: 10
+Plan:
+(Order of implementation, testing approach, estimation technique)
+Modify add patient to properly add them into a circular buffer.
+
+Complete
+Actual Time	HH MM: 5
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+Easy fix for the code that I had in place.
+
+===========  Stage 7  ==========================================
+Start
+Estimated Time	HH:1 MM:00
+Plan:
+(Order of implementation, testing approach, estimation technique)
+Start by writing the function to reset patient data. Then add the
+case in the main function to call it. Test remove patient data.
+Once this function works, write the function to checkout a patient
+by using the remove data function. Include this case in the main
+and test it. Make sure both functions completely remove all
+allocated memory by using valgrind.
+
+Complete
+Actual Time	HH:2 MM:00
+Observations:
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+I ran into a lot of problems with my circular buffers, especially
+when dealing with only one or two patients. There were a lot of
+very frustrating bugs that needed to be worked out that I didn't
+expect.
+
+===========  PROJECT SUMMARY REFLECTION  =======================
+I found this lab to be a lot different from the last one in the
+way it worked. I felt very good through the first few steps
+because it was a lot of the same things as part one. In the later
+steps I realized that I was accidently working ahead becuase I
+was implementing the functions in health_util in order with they're
+full functionality. I felt that I wasn't quite testing the fuctions
+fully as I went, which I found out was true when I got to the final
+step and my data structures were not working properly. This made
+level 7 very difficult and time consuming, most of the time being
+spent debugging. I would like to aviod this in the future by doing
+more extensive unit testing at each stage. 
+================================================================
